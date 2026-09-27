@@ -1,0 +1,13 @@
+fold,modelo,especificacao,AICc
+1,SARIMA,"SARIMA(1, 0, 1)x(0, 1, 1, 7)",29432.633785699094
+1,ETS,"ETS(A,add,MUL; damped=True)",29618.387357815893
+1,DHR-Fourier,"Fourier semanal K=3 + anual K=2 + ARMA(1, 1)",29603.696088073382
+2,SARIMA,"SARIMA(1, 0, 1)x(0, 1, 1, 7)",29911.744840182244
+2,ETS,"ETS(A,add,MUL; damped=True)",30101.89282230042
+2,DHR-Fourier,"Fourier semanal K=3 + anual K=2 + ARMA(1, 1)",30074.117061409073
+3,SARIMA,"SARIMA(1, 0, 1)x(0, 1, 1, 7)",30400.446433349724
+3,ETS,"ETS(A,add,MUL; damped=True)",30595.287621949796
+3,DHR-Fourier,"Fourier semanal K=3 + anual K=2 + ARMA(1, 1)",30539.758970675255
+4,SARIMA,"SARIMA(1, 0, 1)x(0, 1, 1, 7)",30878.51645820339
+4,ETS,"ETS(A,add,MUL; damped=True)",31082.021634816396
+4,DHR-Fourier,"Fourier semanal K=3 + anual K=2 + ARMA(1, 1)",31001.68858893488

@@ -1,0 +1,38 @@
+[
+  {
+    "arquivo":"CARGA_ENERGIA_CONSOLIDADO 2021-2025.xlsx",
+    "formato":"xlsx",
+    "planilha":"Processado",
+    "dimensoes_raw":[
+      1826,
+      4
+    ],
+    "colunas":[
+      "id_subsistema",
+      "nom_subsistema",
+      "din_instante",
+      "val_cargaenergiamwmed"
+    ],
+    "tipos_raw":{
+      "id_subsistema":"str",
+      "nom_subsistema":"str",
+      "din_instante":"datetime64[us]",
+      "val_cargaenergiamwmed":"float64"
+    },
+    "subsistemas":[
+      "Sudeste\/Centro-Oeste"
+    ],
+    "filtro":"Sudeste\/Centro-Oeste",
+    "periodo_inicio":"2021-01-01",
+    "periodo_fim":"2025-12-31",
+    "n":1826,
+    "duplicatas_data":0,
+    "datas_ausentes":0,
+    "nulos":0,
+    "negativos":0,
+    "zeros":0,
+    "outliers_IQR_sinalizados":12,
+    "limite_IQR_inf":30076.2767448038,
+    "limite_IQR_sup":53552.1487031137
+  }
+]
