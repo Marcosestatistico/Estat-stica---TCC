@@ -1,0 +1,174 @@
+{
+  "quality": {
+    "arquivo": "CARGA_ENERGIA_CONSOLIDADO 2021-2025.xlsx",
+    "formato": "xlsx",
+    "planilha": "Processado",
+    "dimensoes_raw": [
+      1826,
+      4
+    ],
+    "colunas": [
+      "id_subsistema",
+      "nom_subsistema",
+      "din_instante",
+      "val_cargaenergiamwmed"
+    ],
+    "tipos_raw": {
+      "id_subsistema": "str",
+      "nom_subsistema": "str",
+      "din_instante": "datetime64[us]",
+      "val_cargaenergiamwmed": "float64"
+    },
+    "subsistemas": [
+      "Sudeste/Centro-Oeste"
+    ],
+    "filtro": "Sudeste/Centro-Oeste",
+    "periodo_inicio": "2021-01-01",
+    "periodo_fim": "2025-12-31",
+    "n": 1826,
+    "duplicatas_data": 0,
+    "datas_ausentes": 0,
+    "nulos": 0,
+    "negativos": 0,
+    "zeros": 0,
+    "outliers_IQR_sinalizados": 12,
+    "limite_IQR_inf": 30076.276744803752,
+    "limite_IQR_sup": 53552.14870311374
+  },
+  "stationarity": {
+    "ADF_stat": -3.098332192249957,
+    "ADF_p": 0.02667686017615872,
+    "KPSS_stat": 0.25015480565530934,
+    "KPSS_p": 0.01
+  },
+  "winner": "SARIMA",
+  "winner_spec_final": "SARIMA(1, 0, 1)x(0, 1, 1, 7)",
+  "ranking": [
+    {
+      "modelo": "SARIMA",
+      "metrica": "RMSE",
+      "media_folds": 2569.6191485650297,
+      "mediana_folds": 2563.727962951048,
+      "dp_folds": 987.3437805033296,
+      "IC95_inf": 998.5348654109209,
+      "IC95_sup": 4140.703431719138,
+      "agregada_todas_previsoes": 2708.150360365174,
+      "ranking_RMSE": 1
+    },
+    {
+      "modelo": "ETS",
+      "metrica": "RMSE",
+      "media_folds": 2768.6062779145195,
+      "mediana_folds": 2572.402598465468,
+      "dp_folds": 1458.259516491414,
+      "IC95_inf": 448.18997271266153,
+      "IC95_sup": 5089.022583116377,
+      "agregada_todas_previsoes": 3043.0365320163382,
+      "ranking_RMSE": 2
+    },
+    {
+      "modelo": "SNaive7",
+      "metrica": "RMSE",
+      "media_folds": 3063.5818169083896,
+      "mediana_folds": 3397.903624462221,
+      "dp_folds": 873.9752102407118,
+      "IC95_inf": 1672.8922275380944,
+      "IC95_sup": 4454.2714062786845,
+      "agregada_todas_previsoes": 3155.6945431993536,
+      "ranking_RMSE": 3
+    },
+    {
+      "modelo": "DHR-Fourier",
+      "metrica": "RMSE",
+      "media_folds": 3396.034033966162,
+      "mediana_folds": 3693.9196800771233,
+      "dp_folds": 1602.151213772149,
+      "IC95_inf": 846.6539285782255,
+      "IC95_sup": 5945.414139354099,
+      "agregada_todas_previsoes": 3668.543790620491,
+      "ranking_RMSE": 4
+    }
+  ],
+  "dm": [
+    {
+      "modelo_1": "SARIMA",
+      "modelo_2": "ETS",
+      "DM_stat": -1.044210170828027,
+      "p_bruto": 0.30564760417566805,
+      "perda_media_1_menos_2": -1925992.9608399956,
+      "p_Holm": 0.30564760417566805,
+      "significativo_5pct": false
+    },
+    {
+      "modelo_1": "SARIMA",
+      "modelo_2": "DHR-Fourier",
+      "DM_stat": -1.9977211310864973,
+      "p_bruto": 0.055913380175420205,
+      "perda_media_1_menos_2": -6124135.169354139,
+      "p_Holm": 0.11182676035084041,
+      "significativo_5pct": false
+    },
+    {
+      "modelo_1": "ETS",
+      "modelo_2": "DHR-Fourier",
+      "DM_stat": -2.275009508572572,
+      "p_bruto": 0.031062442697673866,
+      "perda_media_1_menos_2": -4198142.208514142,
+      "p_Holm": 0.0931873280930216,
+      "significativo_5pct": false
+    }
+  ],
+  "friedman": {
+    "stat": 1.5,
+    "p": 0.4723665527410149
+  },
+  "intervals": [
+    {
+      "modelo": "DHR-Fourier",
+      "nivel": 80,
+      "cobertura": 50.0,
+      "largura_media": 6131.632244780129
+    },
+    {
+      "modelo": "DHR-Fourier",
+      "nivel": 95,
+      "cobertura": 82.14285714285714,
+      "largura_media": 9377.52228573537
+    },
+    {
+      "modelo": "ETS",
+      "nivel": 80,
+      "cobertura": 42.857142857142854,
+      "largura_media": 3153.741591544309
+    },
+    {
+      "modelo": "ETS",
+      "nivel": 95,
+      "cobertura": 57.14285714285714,
+      "largura_media": 4823.320173464939
+    },
+    {
+      "modelo": "SARIMA",
+      "nivel": 80,
+      "cobertura": 71.42857142857143,
+      "largura_media": 5427.694519191702
+    },
+    {
+      "modelo": "SARIMA",
+      "nivel": 95,
+      "cobertura": 85.71428571428571,
+      "largura_media": 8300.942437833535
+    }
+  ],
+  "counts": {
+    "DHR-Fourier": 28,
+    "ETS": 28,
+    "SARIMA": 28,
+    "SNaive7": 28
+  },
+  "python": "3.12.14 (main, Aug 18 2026, 15:00:50) [GCC 13.2.0]",
+  "pandas": "3.0.5",
+  "numpy": "2.5.2",
+  "scipy": "1.13.1",
+  "statsmodels": "0.14.6"
+}
